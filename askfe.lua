@@ -10,7 +10,7 @@ getfenv().LPH_NO_VIRTUALIZE = function(f) return f end;
 getfenv().LPH_JIT = function(f) return f end;
 
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiet1308/CTE-PUBLIC/main/UILIB.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Braven1111/test/main/iyotpr"))()
 local Settings = {}
 
 local plr = game.Players.LocalPlayer
