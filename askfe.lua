@@ -262,16 +262,16 @@ spawn(function()
     end
 end)
 
-local s,e = pcall(function() 
-    print(game:GetService("RunService"):GetAllBoundInfo())
-    for k,v in game:GetService("RunService"):GetAllBoundInfo() do print(k,v) end
+-- local s,e = pcall(function() 
+--     print(game:GetService("RunService"):GetAllBoundInfo())
+--     for k,v in game:GetService("RunService"):GetAllBoundInfo() do print(k,v) end
     
- end)
-print(s,e)
- if game:GetService("ReplicatedFirst"):FindFirstChild("Blunder") then 
-     game:GetService("ReplicatedFirst"):FindFirstChild("Blunder"):Destroy()
-     print("Xoa r")
- end
+-- end)
+-- print(s,e)
+-- if game:GetService("ReplicatedFirst"):FindFirstChild("Blunder") then 
+--     game:GetService("ReplicatedFirst"):FindFirstChild("Blunder"):Destroy()
+--     print("Xoa r")
+-- end
 
 function BoostFps() 
     StopCheckPet = true
@@ -290,60 +290,60 @@ function BoostFps()
             end
         end
         for k,v in plr.PlayerGui:GetChildren() do v:Destroy() end
-         if game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Scripts") then 
-             for k,v in game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Scripts"):GetChildren() do 
-                 if v.Name ~= "Core" then
-                  if v.Name == "Game" then 
-                        for k,v in v:GetChildren() do 
-                            if v.Name ~= "Orbs Frontend" and v.Name ~= "Lootbags Frontend" then 
-                                v:Destroy()
-                            end
-                        end
-                     else
-                         v:Destroy()
-                     end
-                end
+        -- if game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Scripts") then 
+        --     for k,v in game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Scripts"):GetChildren() do 
+        --         if v.Name ~= "Core" then
+        --             if v.Name == "Game" then 
+        --                 for k,v in v:GetChildren() do 
+        --                     if v.Name ~= "Orbs Frontend" and v.Name ~= "Lootbags Frontend" then 
+        --                         v:Destroy()
+        --                     end
+        --                 end
+        --             else
+        --                 v:Destroy()
+        --             end
+        --         end
                 
-            end
-            --game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Scripts"):Destroy()
-        end
-        game.ReplicatedStorage.Library:Destroy()
-         for k,v in game:GetService("Players").LocalPlayer.PlayerScripts.Scripts:GetChildren() do 
-             if v.Name ~= "Game" then 
-                 v:Destroy()
-             end
-         end
-         for k,v in game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game:GetChildren() do 
-             if not table.find({
-                 "Giftbags Frontend",
-                  "Lootbags Frontend",
-                 "Orbs Frontend",
-              },v.Name) then 
-                 v:Destroy()
-             end
-         end
-        for k,v in game.Workspace:GetChildren() do 
-             if v.Name ~= plr.Name and v.Name ~= "__DEBRIS" and v.Name ~= "__THINGS" then 
-                 pcall(function() 
-                     v:Destroy()
-                 end)
-             end
-         end
-         for k,v in game.Workspace["__DEBRIS"]:GetChildren() do 
-             v:Destroy()
-         end
+        --     end
+        --     --game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Scripts"):Destroy()
+        -- end
+        --game.ReplicatedStorage.Library:Destroy()
+        -- for k,v in game:GetService("Players").LocalPlayer.PlayerScripts.Scripts:GetChildren() do 
+        --     if v.Name ~= "Game" then 
+        --         v:Destroy()
+        --     end
+        -- end
+        -- for k,v in game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game:GetChildren() do 
+        --     if not table.find({
+        --         "Giftbags Frontend",
+        --          "Lootbags Frontend",
+        --         "Orbs Frontend",
+        --      },v.Name) then 
+        --         v:Destroy()
+        --     end
+        -- end
+        -- for k,v in game.Workspace:GetChildren() do 
+        --     if v.Name ~= plr.Name and v.Name ~= "__DEBRIS" and v.Name ~= "__THINGS" then 
+        --         pcall(function() 
+        --             v:Destroy()
+        --         end)
+        --     end
+        -- end
+        -- for k,v in game.Workspace["__DEBRIS"]:GetChildren() do 
+        --     v:Destroy()
+        -- end
         
-         for k,v in game.Workspace["__DEBRIS"]:GetChildren() do 
-             if v.Name ~= "Pets" and v.Name ~="Orbs" and v.Name ~="Lootbags" then 
-                 v:Destroy()
-             end
-         end
+        -- for k,v in game.Workspace["__DEBRIS"]:GetChildren() do 
+        --     if v.Name ~= "Pets" and v.Name ~="Orbs" and v.Name ~="Lootbags" then 
+        --         v:Destroy()
+        --     end
+        -- end
 
         
-         pcall(function() 
-             game.Players.LocalPlayer.PlayerScripts.Scripts.Game.Breakables["Breakables Frontend"]:Destroy()
-             game.Workspace["__THINGS"].Breakables:Destroy()
-         end)
+        -- pcall(function() 
+        --     game.Players.LocalPlayer.PlayerScripts.Scripts.Game.Breakables["Breakables Frontend"]:Destroy()
+        --     game.Workspace["__THINGS"].Breakables:Destroy()
+        -- end)
 
 
         
@@ -643,9 +643,9 @@ if not getgenv().Breakables then
 end
 
 
- for k,v in getgenv().Breakables["VIP"] do
-     game.Workspace.__THINGS.Breakables:FindFirstChild(v):FindFirstChildOfClass("MeshPart").Transparency = 1
- end
+-- for k,v in getgenv().Breakables["VIP"] do
+--     game.Workspace.__THINGS.Breakables:FindFirstChild(v):FindFirstChildOfClass("MeshPart").Transparency = 1
+-- end
 
 getgenv().Tvk = function(...) 
     local v = ...
@@ -675,25 +675,25 @@ getgenv().Tvk = function(...)
             end
         end
     end
-     for k,v in v do 
+    -- for k,v in v do 
 
-         if k ~= "Breakables_UpdatePets" then 
-             if type(v) == "table" then 
-                for k2,v2 in v do 
-                     warn(k,k2,v2)
-                         for k,v in v[1] do 
-                             if type(v) == "table" then 
-                                 for k,v in v do 
-                                     print("Inside",k2,k,v)
-                                 end
-                             else
-                                 print(k2,k,v)
-                             end
-                         end
-                 end
-             end        
-         end
-     end
+    --     if k ~= "Breakables_UpdatePets" then 
+    --         if type(v) == "table" then 
+    --             for k2,v2 in v do 
+    --                 warn(k,k2,v2)
+    --                     for k,v in v[1] do 
+    --                         if type(v) == "table" then 
+    --                             for k,v in v do 
+    --                                 print("Inside",k2,k,v)
+    --                             end
+    --                         else
+    --                             print(k2,k,v)
+    --                         end
+    --                     end
+    --             end
+    --         end        
+    --     end
+    -- end
 end
 if not getgenv().OnClient then 
     game.ReplicatedStorage.Network.Breakables_BulkUpdate.OnClientEvent:Connect(function(...) 
@@ -723,15 +723,15 @@ for k,v in workspace.__THINGS.Breakables:GetChildren() do
 end
 
 
- workspace.__THINGS.Breakables.ChildAdded:Connect(BreakableAdded)
- workspace.__THINGS.Breakables.ChildRemoved:Connect(function(Breakable) 
-     local id = Breakable:GetAttribute("ParentID")
-     local BreakabeId = Breakable:GetAttribute("BreakableID")
-     if string.match(BreakabeId,"Diamond") and id == "Spawn" then id = "VIP" end
-     if Breakables[id] then 
-         Breakables[id][Breakable.Name] = nil
-     end
- end)
+-- workspace.__THINGS.Breakables.ChildAdded:Connect(BreakableAdded)
+-- workspace.__THINGS.Breakables.ChildRemoved:Connect(function(Breakable) 
+--     local id = Breakable:GetAttribute("ParentID")
+--     local BreakabeId = Breakable:GetAttribute("BreakableID")
+--     if string.match(BreakabeId,"Diamond") and id == "Spawn" then id = "VIP" end
+--     if Breakables[id] then 
+--         Breakables[id][Breakable.Name] = nil
+--     end
+-- end)
 
 
 
@@ -770,33 +770,33 @@ end)
 
 function GetSizeOfCoin(coin) return coin.Size.X ^ 2 + coin.Size.Y ^2 + coin.Size.Z ^2 end
 function Length(tabl) local c = 0 for k,v in tabl do c = c + 1 end return c end
-https://www.roblox.com/games/8737899170/Pet-Simulator-99?privateServerLinkCode=17503465937270991503078054081587
+--https://www.roblox.com/games/8737899170/Pet-Simulator-99?privateServerLinkCode=17503465937270991503078054081587
 
- local HookList = {}
+-- local HookList = {}
 
- if not getgenv().Hooked then 
-     local old
-     old = hookmetamethod(game,"__namecall",function(...) 
-         local self,arg = ...
+-- if not getgenv().Hooked then 
+--     local old
+--     old = hookmetamethod(game,"__namecall",function(...) 
+--         local self,arg = ...
 
-     end) 
- end
+--     end) 
+-- end
 
- function HookMt() 
+-- function HookMt() 
 
 
- function HookMetaMethod(a,b,func) 
-     local HookTask
-     HookTask = TaskHandler:AddTask("HookMt"..tostring(math.random(1,100000)),function() 
-         local old
-         old = hookmetamethod(a,b,function(...)
-             if HookTask:IsRunning() then 
-                 return func(...)
-             end
-             return old(...)
-         end)
-     end)
- end
+-- function HookMetaMethod(a,b,func) 
+--     local HookTask
+--     HookTask = TaskHandler:AddTask("HookMt"..tostring(math.random(1,100000)),function() 
+--         local old
+--         old = hookmetamethod(a,b,function(...)
+--             if HookTask:IsRunning() then 
+--                 return func(...)
+--             end
+--             return old(...)
+--         end)
+--     end)
+-- end
 
 LPH_NO_VIRTUALIZE(function() 
     local old 
@@ -864,27 +864,27 @@ local FarmCoinTask = SetFeatureFunction("FarmCoin",function()
                                 if not FarmCoinList.Coins[k] then 
                                     local FarmingMode = Settings.FarmingMode
                                     if FarmingMode ~= "All" then 
-                                         local MeshPart = v:FindFirstChildOfClass("MeshPart")
-                                         if MeshPart then 
-                                             if not Lowest then 
-                                                 Lowest = v
-                                             end
-                                             if FarmingMode == "Lowest Health" then 
-                                                 local Size = GetSizeOfCoin(MeshPart)
-                                                 if Size < GetSizeOfCoin(Lowest:FindFirstChildOfClass("MeshPart")) then 
-                                                     Lowest = v
-                                                 end
-                                             elseif FarmingMode == "Highest Health" then
-                                                 local Size = GetSizeOfCoin(MeshPart)
-                                                 if Size > GetSizeOfCoin(Lowest:FindFirstChildOfClass("MeshPart")) then 
-                                                     Lowest = v
-                                                 end
-                                             else
-                                                 Lowest = v
-                                             end
-                                         else
+                                        -- local MeshPart = v:FindFirstChildOfClass("MeshPart")
+                                        -- if MeshPart then 
+                                        --     if not Lowest then 
+                                        --         Lowest = v
+                                        --     end
+                                        --     if FarmingMode == "Lowest Health" then 
+                                        --         local Size = GetSizeOfCoin(MeshPart)
+                                        --         if Size < GetSizeOfCoin(Lowest:FindFirstChildOfClass("MeshPart")) then 
+                                        --             Lowest = v
+                                        --         end
+                                        --     elseif FarmingMode == "Highest Health" then
+                                        --         local Size = GetSizeOfCoin(MeshPart)
+                                        --         if Size > GetSizeOfCoin(Lowest:FindFirstChildOfClass("MeshPart")) then 
+                                        --             Lowest = v
+                                        --         end
+                                        --     else
+                                        --         Lowest = v
+                                        --     end
+                                        -- else
                                             
-                                         end
+                                        -- end
                                     else
                                         if FarmCoinList.Length < PetPerCoin then 
                                             FarmCoinList.Coins[k] = v
@@ -950,17 +950,17 @@ end
 
 
 
- for k,v in getgc(true) do 
-     if type(v) == "table" then 
-         if pcall(function() return v.RegularMerchant.Seeds end) and v.RegularMerchant and type(v.RegularMerchant) == "table" and v.RegularMerchant.Seeds then 
-             getgenv().Table = v
-             print("Done")
-             break
-         end
-     end
- end
+-- for k,v in getgc(true) do 
+--     if type(v) == "table" then 
+--         if pcall(function() return v.RegularMerchant.Seeds end) and v.RegularMerchant and type(v.RegularMerchant) == "table" and v.RegularMerchant.Seeds then 
+--             getgenv().Table = v
+--             print("Done")
+--             break
+--         end
+--     end
+-- end
 
-setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
+--setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
 
 
 
@@ -987,7 +987,7 @@ Section11.CreateToggle({Title = 'Auto Merchant', Default = Settings.AutoMerchant
     SetFeatureState("AutoMerchant",v)
 end)
 
-setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
+--setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
 local MerchantInfo = {
     RegularMerchant = {
         Position = CFrame.new(372.11248779296875, 16.306806564331055, 551.4596557617188)
@@ -1024,38 +1024,38 @@ end)
 
 
 
- for k,v in getgc() do 
+-- for k,v in getgc() do 
 
-     if type(v) == "function" then 
-         if tostring(getfenv(v).script) == "Traveling Merchant" and debug.getinfo(v).name == "updateUI" then 
-             for k,v in getupvalues(v)[10] do print(k,v) end
-         end
-     end
- end
+--     if type(v) == "function" then 
+--         if tostring(getfenv(v).script) == "Traveling Merchant" and debug.getinfo(v).name == "updateUI" then 
+--             for k,v in getupvalues(v)[10] do print(k,v) end
+--         end
+--     end
+-- end
 
- local a = getsenv(game.Players.LocalPlayer.PlayerScripts.Scripts.Game.Machines["Traveling Merchant"]).updateUI
- print(a)
- for k,v in getupvalues(a) do print(k,v) end
+-- local a = getsenv(game.Players.LocalPlayer.PlayerScripts.Scripts.Game.Machines["Traveling Merchant"]).updateUI
+-- print(a)
+-- for k,v in getupvalues(a) do print(k,v) end
 local plr = game.Players.LocalPlayer
 local MerchantUtil = require(game.ReplicatedStorage.Library.Util.MerchantUtil)
 local SaveModule = require(game.ReplicatedStorage.Library.Client.Save)
- for k,v in SaveModule.GetSaves()[plr].MerchantExperience do print(k,v) end
- print()
- for k,v in getgc() do 
+-- for k,v in SaveModule.GetSaves()[plr].MerchantExperience do print(k,v) end
+-- print()
+-- for k,v in getgc() do 
 
-     if type(v) == "function" then 
-         if tostring(getfenv(v).script) == "Traveling Merchant" and debug.getinfo(v).name == "updateUI" then 
-print(getupvalues(v)[1].Save:Get("ExperienceFromRespectLevel"))
- for k,v in getupvalues(v)[1].Save.GetSaves() do 
-     warn(k,v)
-    for k,v in v do print(k,v.MerchantExperience) end
-     break
- end
-for k,v i
- print(getupvalues(v)[1].TabController:Get("ExperienceFromRespectLevel"))
-         end
-     end
- end
+--     if type(v) == "function" then 
+--         if tostring(getfenv(v).script) == "Traveling Merchant" and debug.getinfo(v).name == "updateUI" then 
+-- --print(getupvalues(v)[1].Save:Get("ExperienceFromRespectLevel"))
+--             -- for k,v in getupvalues(v)[1].Save.GetSaves() do 
+--             --     warn(k,v)
+--             --     for k,v in v do print(k,v.MerchantExperience) end
+--             --     break
+--             -- end
+--            --for k,v i
+--            -- print(getupvalues(v)[1].TabController:Get("ExperienceFromRespectLevel"))
+--         end
+--     end
+-- end
 
 
 SetFeatureFunction("AutoMerchant",function() 
@@ -1099,11 +1099,11 @@ SetFeatureFunction("AutoMerchant",function()
                     if Break then break end
                 end
             end
-           if MerchantTable == nil then 
-                 MerchantsTable = true
-            end
+            -- if MerchantTable == nil then 
+            --     MerchantsTable = true
+            -- end
         else
-           print(MerchantsTable)
+           --print(MerchantsTable)
         end
         StoppedTp = false
     end
@@ -1141,15 +1141,15 @@ Section11.CreateDropdown({Title = 'Farming Method', List = {"Script","Engine"},D
 end)
 Section11.CreateLabel({Title = "Method Script: Use CTE HUB implemented farm function (recommended in low level farm like vip area) \nMethod Engine: Use game built in Farm Method with pet instant tp (Not work with Ultra Boost FPS)"})
 
- local Page1 = Main.CreatePage({Page_Name = 'Auto Rank', Page_Title = 'Main Tab'})
- local Section11 = Page1.CreateSection('Main')
+-- local Page1 = Main.CreatePage({Page_Name = 'Auto Rank', Page_Title = 'Main Tab'})
+-- local Section11 = Page1.CreateSection('Main')
 
- Section11.CreateToggle({Title = 'Auto Rank',Desc = "Auto farm rank", Default = Settings.AutoRank}, function(v)
-    SetFeatureState("AutoRank",v)
- end)
+-- Section11.CreateToggle({Title = 'Auto Rank',Desc = "Auto farm rank", Default = Settings.AutoRank}, function(v)
+--    SetFeatureState("AutoRank",v)
+-- end)
 
- 2 ^ 10 = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
- = (2 * 2 * 2 * 2 * 2 ) ^ 2
- = ((2*2)^2 * 2)^2
+-- 2 ^ 10 = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
+-- = (2 * 2 * 2 * 2 * 2 ) ^ 2
+-- = ((2*2)^2 * 2)^2
 
 workspace.ALWAYS_RENDERING:Destroy()
